@@ -1,0 +1,6 @@
+body{font-family: Raleway;box-sizing: border-box;}
+.carousel-item{background-color: #333;height: 87vh;}
+footer{background: #28a745;}
+footer .footer-copyright{color:white;}
+.countdown{background: #f8f9fa !important;}
+button[data-target="#remindme"]{border:1px solid #333;}
