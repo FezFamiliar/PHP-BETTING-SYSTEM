@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Betting System</title>
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<script type="text/javascript" src="js/time.js"></script>
-</head>
+<?php 
+	include 'config.php';
+ ?>
 <body>
-	<?php include 'nav.php'; ?>
 <div id="carousel" class="carousel slide" data-ride="carousel" >
   <ol class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -28,11 +14,7 @@
   		
   	?>
   	    <div class="carousel-item  <?php if($i == 0) echo 'active'; ?>">
-     		 <div class="d-block w-100">
-  		     <div class="carousel-caption d-none d-md-block">
-		      <h5>Slide Number <?php echo $i; ?></h5>
-		      <p>Text for Slide Number <?php echo $i; ?></p>
-     		 </div>
+     		 <div class="d-block w-100" style="background-image:url('img/rsz_pic<?php echo $i+1 . '.jpg'?>');background-repeat:no-repeat;background-position:center;background-size:cover;height:100%;">
 		  </div>
         </div>
   	 <?php endfor; ?>
@@ -46,7 +28,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<section class="countdown py-5">
+<section class="countdown">
 			<div class="d-flex flex-column align-items-center justify-content-center aw-vertical-align">
 			<p>Super offers ending in:</p>
 			<div id="countdown" class="row my-3">
@@ -85,6 +67,4 @@
 		</div>
 
 </section>
-	<?php include 'footer.php'; ?>
 </body>
-</html>
